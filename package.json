@@ -2,9 +2,10 @@
   "name": "twitter_bot",
   "version": "1.0.0",
   "description": "Personal twitter bot",
-  "type": "module",
-  "main": "app.js",
+  "type": "commonjs",
+  "main": "dist/app.js",
   "scripts": {
+    "start": "ts-node ./src/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.17",
-    "@types/twit": "^2.2.30"
+    "@types/twit": "^2.2.30",
+    "ts-node": "^10.5.0"
   }
 }

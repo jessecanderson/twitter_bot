@@ -1,13 +1,11 @@
-import express from "express";
+import express, { Application } from "express";
 import Twit from "twit";
 import "dotenv/config";
 
-const app = express();
-const port = 3000;
+const app: Application = express();
+const port = process.env.PORT || 8000;
 
 const twitter = new Twit({
-    client_id: process.env.CLIENT_ID,
-    client_secret: process.env.CLIENT_SECRET,
     consumer_key: process.env.API_KEY,
     consumer_secret: process.env.API_SECRET,
     access_token: process.env.ACCESS_TOKEN,
